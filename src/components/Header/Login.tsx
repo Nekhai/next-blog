@@ -16,7 +16,7 @@ export const Login = () => {
         )
       }
       <div>
-        {status === 'loading' ? '...Loading' : session && session.user.name}
+        {status === 'loading' ? '...Loading' : session && session?.user?.name}
       </div>
       {
         !session

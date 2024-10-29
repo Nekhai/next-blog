@@ -8,8 +8,7 @@ export default async function BlogDetailPage({ params }: { params: { id: string 
 
   return (
     <div>
-      Blog
-      {params.id}
+      {blog.title}
     </div>
   );
 }
