@@ -13,7 +13,7 @@ export const BlogCard: FC<BlogCardProps> = ({
   slug, image, name, description
 }) => (
   <Link href={`/blog/${slug}`}>
-    <div>
+    <div className="border">
       <Image
         src={image}
         alt={name}

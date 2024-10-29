@@ -1,19 +1,22 @@
 import { BlogCard } from '@/components/BlogCard/BlogCard';
+import { Blog } from '@/types';
 
 export default async function BlogPage() {
-  const res = await fetch('http://localhost:3000/api/blog');
-  const blogs = await res.json();
+  const res: Response = await fetch(`${process.env.BASE_URL}/blog`, {
+    cache: 'no-store',
+  });
+  const blogs: Blog[] = await res.json();
 
   return (
-    <div className="flex py-5">
+    <div className="page-height flex flex-wrap justify-center gap-5 pt-20 pb-10 px-10">
       {
-        blogs.map((blog) => (
-          <div className="flex justify-center w-1/4" key={blog.id}>
+        blogs.map((blog: Blog) => (
+          <div className="flex justify-center" key={blog.id}>
             <BlogCard
               slug={blog.id}
               image={blog.image}
-              name={blog.name}
-              description={blog.description}
+              name={blog.title}
+              description={blog.content}
             />
           </div>
         ))

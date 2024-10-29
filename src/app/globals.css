@@ -3,8 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: linear-gradient(to bottom, #101010FF, #000052FF);
+  --foreground: #ffffff;
+  --active: #0101B2FF;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -16,7 +17,7 @@
 
 body {
   color: var(--foreground);
-  background: var(--background);
+  background: var(--background) fixed;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -24,4 +25,8 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.page-height {
+  min-height: calc(100vh - 50px);
 }

@@ -13,10 +13,14 @@ const config: Config = {
         foreground: 'var(--foreground)',
         primary: {
           light: '#fff',
-          dark: '#af5b04',
+          dark: '#101010FF',
           DEFAULT: '#000',
         },
+        active: 'var(--active)'
       },
+    },
+    backgroundImage: {
+      'home-bg': "url('/images/home-bg.jpg')",
     },
   },
   plugins: [],

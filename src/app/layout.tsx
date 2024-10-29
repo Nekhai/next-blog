@@ -33,7 +33,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Providers session={session}>
-          <main>
+          <main className="h-screen bg-fixed ">
             <Header />
             {children}
             <Footer />

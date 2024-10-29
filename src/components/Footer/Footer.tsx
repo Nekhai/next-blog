@@ -1,5 +1,5 @@
 export const Footer = () => (
-  <footer className="fixed bottom-0 p-3 w-full text-center bg-primary-dark">
+  <footer className="bottom-0 p-3 w-full text-center bg-primary-dark">
     &copy; blog 2024
   </footer>
 );
